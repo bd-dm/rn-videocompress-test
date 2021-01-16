@@ -164,9 +164,13 @@ const App = () => {
         mediaType: 'video',
         durationLimit: 60 * 10,
       },
-      async ({uri, didCancel}) => {
+      async ({uri, didCancel, errorMessage}) => {
         if (didCancel) {
           return;
+        }
+
+        if (!uri) {
+          log('Uri is empty :( ' + errorMessage);
         }
 
         const filePath = await getFilePathByUri(uri);
