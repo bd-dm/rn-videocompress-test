@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* videocompressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* videocompressTests.m */; };
+		0702B4B27291389487F76B21 /* libPods-videocompress-videocompressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC3EEC46A2B7F49127629F2 /* libPods-videocompress-videocompressTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -15,7 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* videocompressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* videocompressTests.m */; };
+		2F20204163FB1AD984401DF9 /* libPods-videocompress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C516CDD5E0385B979D232278 /* libPods-videocompress.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8EC1B13A3B3F649758C26F04 /* libPods-videocompress-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CE34A0C95810DBFE9267C0 /* libPods-videocompress-tvOSTests.a */; };
+		D7E43E0687087FABEE189D81 /* libPods-videocompress-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFAB7CB66AEA47760136889 /* libPods-videocompress-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +50,21 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = videocompress/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = videocompress/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = videocompress/main.m; sourceTree = "<group>"; };
+		1A1C89C4B16C79FD818B3867 /* Pods-videocompress-videocompressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-videocompressTests.release.xcconfig"; path = "Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests.release.xcconfig"; sourceTree = "<group>"; };
+		2992E78412C86324CBA613EA /* Pods-videocompress-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-tvOS.release.xcconfig"; path = "Target Support Files/Pods-videocompress-tvOS/Pods-videocompress-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2A123926ABCBF15B84C1B2EC /* Pods-videocompress-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-videocompress-tvOS/Pods-videocompress-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2CC3EEC46A2B7F49127629F2 /* libPods-videocompress-videocompressTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-videocompress-videocompressTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* videocompress-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "videocompress-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* videocompress-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "videocompress-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CE34A0C95810DBFE9267C0 /* libPods-videocompress-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-videocompress-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48074837BA9634734E728395 /* Pods-videocompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress.release.xcconfig"; path = "Target Support Files/Pods-videocompress/Pods-videocompress.release.xcconfig"; sourceTree = "<group>"; };
+		66FA178FE157B91D524C3977 /* Pods-videocompress-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-videocompress-tvOSTests/Pods-videocompress-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = videocompress/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		989D3E49461CE56E14D2D058 /* Pods-videocompress-videocompressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-videocompressTests.debug.xcconfig"; path = "Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EFAB7CB66AEA47760136889 /* libPods-videocompress-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-videocompress-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02E4B10B24DE92C7E634969 /* Pods-videocompress-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-videocompress-tvOSTests/Pods-videocompress-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C516CDD5E0385B979D232278 /* libPods-videocompress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-videocompress.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D607B827C12573DA69CF2E67 /* Pods-videocompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocompress.debug.xcconfig"; path = "Target Support Files/Pods-videocompress/Pods-videocompress.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0702B4B27291389487F76B21 /* libPods-videocompress-videocompressTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F20204163FB1AD984401DF9 /* libPods-videocompress.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E43E0687087FABEE189D81 /* libPods-videocompress-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC1B13A3B3F649758C26F04 /* libPods-videocompress-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				C516CDD5E0385B979D232278 /* libPods-videocompress.a */,
+				9EFAB7CB66AEA47760136889 /* libPods-videocompress-tvOS.a */,
+				43CE34A0C95810DBFE9267C0 /* libPods-videocompress-tvOSTests.a */,
+				2CC3EEC46A2B7F49127629F2 /* libPods-videocompress-videocompressTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +164,7 @@
 				00E356EF1AD99517003FC87E /* videocompressTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				E07E9C96109C58D73E00684D /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -157,6 +182,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E07E9C96109C58D73E00684D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D607B827C12573DA69CF2E67 /* Pods-videocompress.debug.xcconfig */,
+				48074837BA9634734E728395 /* Pods-videocompress.release.xcconfig */,
+				2A123926ABCBF15B84C1B2EC /* Pods-videocompress-tvOS.debug.xcconfig */,
+				2992E78412C86324CBA613EA /* Pods-videocompress-tvOS.release.xcconfig */,
+				C02E4B10B24DE92C7E634969 /* Pods-videocompress-tvOSTests.debug.xcconfig */,
+				66FA178FE157B91D524C3977 /* Pods-videocompress-tvOSTests.release.xcconfig */,
+				989D3E49461CE56E14D2D058 /* Pods-videocompress-videocompressTests.debug.xcconfig */,
+				1A1C89C4B16C79FD818B3867 /* Pods-videocompress-videocompressTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +204,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "videocompressTests" */;
 			buildPhases = (
+				3F0F055A683229E491CA6263 /* [CP] Check Pods Manifest.lock */,
+				8521B503C848CBB1D8A5584C /* [CP] Prepare Artifacts */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				85FD6FB2B47CFB0DB838A4A3 /* [CP] Embed Pods Frameworks */,
+				0EF3CB9084EF2D298B400615 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,11 +226,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "videocompress" */;
 			buildPhases = (
+				143F23CF757637E5D1360DC7 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
+				B7E731A2C9DE233283ECF9D0 /* [CP] Prepare Artifacts */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				61DDFF64272AB99373DADDC4 /* [CP] Embed Pods Frameworks */,
+				C0CD32B5001923BB8960A49D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "videocompress-tvOS" */;
 			buildPhases = (
+				109EB0B33E4205CCBC52D133 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -220,6 +269,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "videocompress-tvOSTests" */;
 			buildPhases = (
+				9F4F02588270FE48C9DCB79C /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -247,6 +297,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = RC7RRZ42MQ;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -330,6 +381,68 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		0EF3CB9084EF2D298B400615 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		109EB0B33E4205CCBC52D133 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-videocompress-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		143F23CF757637E5D1360DC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-videocompress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +456,238 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		3F0F055A683229E491CA6263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-videocompress-videocompressTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DDFF64272AB99373DADDC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8521B503C848CBB1D8A5584C /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-artifacts.sh",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/mobileffmpeg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavcodec.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavdevice.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavfilter.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavformat.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavutil.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libswresample.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libswscale.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/expat.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/fontconfig.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/freetype.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/fribidi.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/giflib.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/gmp.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/gnutls.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/jpeg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/kvazaar.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/lame.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libaom.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libass.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libhogweed.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libilbc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libnettle.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libogg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libopencore-amrnb.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libpng.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libsndfile.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheora.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheoradec.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheoraenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbis.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbisenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbisfile.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvpx.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebp.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebpmux.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebpdemux.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libxml2.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/opus.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/shine.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/snappy.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/soxr.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/speex.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/tiff.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/twolame.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/vo-amrwbenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/wavpack.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvidstab.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/x264.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/x265.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/xvidcore.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85FD6FB2B47CFB0DB838A4A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress-videocompressTests/Pods-videocompress-videocompressTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F4F02588270FE48C9DCB79C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-videocompress-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E731A2C9DE233283ECF9D0 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-artifacts.sh",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/mobileffmpeg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavcodec.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavdevice.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavfilter.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavformat.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libavutil.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libswresample.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libswscale.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/expat.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/fontconfig.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/freetype.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/fribidi.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/giflib.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/gmp.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/gnutls.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/jpeg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/kvazaar.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/lame.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libaom.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libass.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libhogweed.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libilbc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libnettle.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libogg.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libopencore-amrnb.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libpng.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libsndfile.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheora.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheoradec.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libtheoraenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbis.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbisenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvorbisfile.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvpx.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebp.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebpmux.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libwebpdemux.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libxml2.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/opus.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/shine.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/snappy.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/soxr.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/speex.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/tiff.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/twolame.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/vo-amrwbenc.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/wavpack.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/libvidstab.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/x264.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/x265.xcframework",
+				"${PODS_ROOT}/mobile-ffmpeg-full-gpl/xvidcore.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0CD32B5001923BB8960A49D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocompress/Pods-videocompress-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -437,6 +782,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 989D3E49461CE56E14D2D058 /* Pods-videocompress-videocompressTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -459,6 +805,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1C89C4B16C79FD818B3867 /* Pods-videocompress-videocompressTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -478,10 +825,12 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D607B827C12573DA69CF2E67 /* Pods-videocompress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RC7RRZ42MQ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = videocompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -500,10 +849,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48074837BA9634734E728395 /* Pods-videocompress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RC7RRZ42MQ;
 				INFOPLIST_FILE = videocompress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -520,6 +871,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A123926ABCBF15B84C1B2EC /* Pods-videocompress-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -547,6 +899,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2992E78412C86324CBA613EA /* Pods-videocompress-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -574,6 +927,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02E4B10B24DE92C7E634969 /* Pods-videocompress-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -600,6 +954,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FA178FE157B91D524C3977 /* Pods-videocompress-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
