@@ -45,6 +45,7 @@ const App = () => {
   const [state, setState] = useState({
     videoUri: null,
     thumbnailUri: null,
+    convertedVideo: null,
     isLoading: false,
     log: ['Log started'],
   });
@@ -63,12 +64,33 @@ const App = () => {
     }));
   };
 
+  const setConvertedVideo = (uri) => {
+    setState((prevState) => ({
+      ...prevState,
+      convertedVideo: uri,
+    }));
+  };
+
+  const convertVideo = () => async () => {
+    const resultPath = `${RNFS.CachesDirectoryPath}/video.mp4`;
+    log(`convertVideo resultPath: ${resultPath}`);
+
+    const result = await RNFFmpeg.execute(
+      `-y -i ${state.videoUri} -vf scale=-2:720 -c:v libx264 -crf 23 -preset slower -c:a copy ${resultPath}`,
+    );
+    log(`convertVideo result: ${result}`);
+
+    if (result === 0) {
+      setConvertedVideo(resultPath);
+    }
+  };
+
   const getVideoFrame = (n) => async () => {
     const resultPath = `${RNFS.CachesDirectoryPath}/thumbnail.png`;
     log(`getVideoFrame resultPath: ${resultPath}`);
 
     const result = await RNFFmpeg.execute(
-      `-y -i ${state.videoUri} -vf "select=eq(n\\,34)" -vframes 1 ${resultPath}`,
+      `-y -i ${state.videoUri} -vf "select=eq(n\\,${n})" -vframes 1 ${resultPath}`,
     );
     log(`getVideoFrame result: ${result}`);
 
@@ -81,7 +103,13 @@ const App = () => {
     const result = await RNFFprobe.getMediaInformation(state.videoUri);
     const info = result.getMediaProperties();
     log('Video info:');
-    Object.entries(info).forEach(([key, value]) => log(`\t ${key}: ${value}`));
+    Object.entries(info).forEach(([key, value]) => {
+      log(
+        `\t ${key}: ${
+          typeof value === 'string' ? value : JSON.stringify(value)
+        }`,
+      );
+    });
   };
 
   const pickVideo = (videoUri) => {
@@ -99,6 +127,10 @@ const App = () => {
         durationLimit: 60 * 10,
       },
       async ({uri, didCancel}) => {
+        if (didCancel) {
+          return;
+        }
+
         const filePath = await getFilePathByUri(uri);
         return !didCancel && pickVideo(decodeURIComponent(filePath));
       },
@@ -115,8 +147,9 @@ const App = () => {
         <Button onPress={openVideoPicker}>Pick a video</Button>
         {state.videoUri && (
           <>
-            <Button onPress={getVideoFrame(1)}>Show first frame</Button>
+            <Button onPress={getVideoFrame(500)}>Show 500th frame</Button>
             <Button onPress={getVideoInfo()}>Get video info</Button>
+            <Button onPress={convertVideo()}>Convert video to 720p</Button>
           </>
         )}
       </View>
@@ -132,6 +165,7 @@ const App = () => {
             style={styles.thumbnail}
           />
         )}
+        {state.convertedVideo && <Text>{state.convertedVideo}</Text>}
 
         <View style={styles.log}>
           {state.log.map((el, idx) => (
