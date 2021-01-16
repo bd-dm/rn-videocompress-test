@@ -10,7 +10,7 @@ import {
   Pressable,
   ActivityIndicator,
 } from 'react-native';
-import {RNFFmpeg} from 'react-native-ffmpeg';
+import {RNFFprobe, RNFFmpeg} from 'react-native-ffmpeg';
 import RNFS from 'react-native-fs';
 
 import {launchImageLibrary} from 'react-native-image-picker';
@@ -77,6 +77,13 @@ const App = () => {
     }
   };
 
+  const getVideoInfo = () => async () => {
+    const result = await RNFFprobe.getMediaInformation(state.videoUri);
+    const info = result.getMediaProperties();
+    log('Video info:');
+    Object.entries(info).forEach(([key, value]) => log(`\t ${key}: ${value}`));
+  };
+
   const pickVideo = (videoUri) => {
     setState((prevState) => ({
       ...prevState,
@@ -101,11 +108,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
-        />
+      <View style={styles.header}>
         {state.isLoading && (
           <ActivityIndicator size="small" color={Colors.primary} />
         )}
@@ -113,8 +116,14 @@ const App = () => {
         {state.videoUri && (
           <>
             <Button onPress={getVideoFrame(1)}>Show first frame</Button>
+            <Button onPress={getVideoInfo()}>Get video info</Button>
           </>
         )}
+      </View>
+
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={styles.scrollView}>
         {state.thumbnailUri && (
           <Image
             source={{
@@ -131,12 +140,15 @@ const App = () => {
             </Text>
           ))}
         </View>
-      </SafeAreaView>
+      </ScrollView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  header: {
+    marginTop: 20,
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
