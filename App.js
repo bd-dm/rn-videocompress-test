@@ -14,6 +14,7 @@ import {
 import CameraRoll from '@react-native-community/cameraroll';
 import {RNFFprobe, RNFFmpeg} from 'react-native-ffmpeg';
 import RNFS from 'react-native-fs';
+import Video from 'react-native-video';
 
 import {launchImageLibrary} from 'react-native-image-picker';
 
@@ -207,7 +208,20 @@ const App = () => {
             style={styles.thumbnail}
           />
         )}
-        {state.convertedVideo && <Text>{state.convertedVideo}</Text>}
+        {state.convertedVideo && (
+          <Video
+            source={{
+              uri: state.convertedVideo,
+            }}
+            onError={console.error}
+            style={styles.video}
+            controls={true}
+            posterResizeMode={'center'}
+          />
+        )}
+        {state.convertedVideo && (
+          <Text>Converted video: {state.convertedVideo}</Text>
+        )}
 
         <View style={styles.log}>
           {state.log.map((el, idx) => (
@@ -243,6 +257,12 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 200,
     resizeMode: 'contain',
+  },
+  video: {
+    width: '100%',
+    height: 400,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
