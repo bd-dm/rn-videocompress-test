@@ -6,23 +6,83 @@ import {
   StyleSheet,
   ScrollView,
   StatusBar,
+  Image,
   Pressable,
+  ActivityIndicator,
 } from 'react-native';
+import {RNFFmpeg} from 'react-native-ffmpeg';
+import RNFS from 'react-native-fs';
 
 import {launchImageLibrary} from 'react-native-image-picker';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const getFilePathByUri = async (uri) => {
+  let destPath = uri;
+
+  if (uri.startsWith('content://')) {
+    const uriComponents = uri.split('/');
+    const fileNameAndExtension = uriComponents[uriComponents.length - 1];
+    destPath = `${RNFS.TemporaryDirectoryPath}/${fileNameAndExtension}`;
+    await RNFS.copyFile(uri, destPath);
+  }
+  return destPath;
+};
+
+const Button = (props) => {
+  const {onPress, children} = props;
+
+  return (
+    <Pressable onPress={onPress}>
+      <View style={styles.button}>
+        <Text>{children}</Text>
+      </View>
+    </Pressable>
+  );
+};
+
+const App = () => {
   const [state, setState] = useState({
-    video: null,
+    videoUri: null,
+    thumbnailUri: null,
+    isLoading: false,
+    log: ['Log started'],
   });
 
-  const pickVideo = (video) => {
+  const log = (line: string) => {
     setState((prevState) => ({
       ...prevState,
-      video,
+      log: [...prevState.log, line],
     }));
+  };
+
+  const setVideoThumbnail = (uri) => {
+    setState((prevState) => ({
+      ...prevState,
+      thumbnailUri: uri,
+    }));
+  };
+
+  const getVideoFrame = (n) => async () => {
+    const resultPath = `${RNFS.CachesDirectoryPath}/thumbnail.png`;
+    log(`getVideoFrame resultPath: ${resultPath}`);
+
+    const result = await RNFFmpeg.execute(
+      `-y -i ${state.videoUri} -vf "select=eq(n\\,34)" -vframes 1 ${resultPath}`,
+    );
+    log(`getVideoFrame result: ${result}`);
+
+    if (result === 0) {
+      setVideoThumbnail(resultPath);
+    }
+  };
+
+  const pickVideo = (videoUri) => {
+    setState((prevState) => ({
+      ...prevState,
+      videoUri,
+    }));
+    log(`Video uri: ${videoUri}`);
   };
 
   const openVideoPicker = () => {
@@ -31,7 +91,10 @@ const App: () => React$Node = () => {
         mediaType: 'video',
         durationLimit: 60 * 10,
       },
-      ({uri, didCancel}) => !didCancel && pickVideo(uri),
+      async ({uri, didCancel}) => {
+        const filePath = await getFilePathByUri(uri);
+        return !didCancel && pickVideo(decodeURIComponent(filePath));
+      },
     );
   };
 
@@ -43,13 +106,31 @@ const App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
         />
-        <Pressable onPress={openVideoPicker}>
-          <View style={styles.button}>
-            <Text>Pick a video</Text>
-          </View>
-        </Pressable>
+        {state.isLoading && (
+          <ActivityIndicator size="small" color={Colors.primary} />
+        )}
+        <Button onPress={openVideoPicker}>Pick a video</Button>
+        {state.videoUri && (
+          <>
+            <Button onPress={getVideoFrame(1)}>Show first frame</Button>
+          </>
+        )}
+        {state.thumbnailUri && (
+          <Image
+            source={{
+              uri: 'file://' + state.thumbnailUri,
+            }}
+            style={styles.thumbnail}
+          />
+        )}
 
-        <Text>Video: {state.video}</Text>
+        <View style={styles.log}>
+          {state.log.map((el, idx) => (
+            <Text key={idx} style={styles.logLine}>
+              # {el}
+            </Text>
+          ))}
+        </View>
       </SafeAreaView>
     </>
   );
@@ -62,6 +143,18 @@ const styles = StyleSheet.create({
   button: {
     padding: 10,
     backgroundColor: Colors.primary,
+  },
+  log: {
+    backgroundColor: Colors.lighter,
+    paddingTop: 5,
+  },
+  logLine: {
+    marginBottom: 5,
+  },
+  thumbnail: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'contain',
   },
 });
 
