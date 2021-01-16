@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {
-  SafeAreaView,
   Text,
   View,
   StyleSheet,
@@ -9,7 +8,10 @@ import {
   Image,
   Pressable,
   ActivityIndicator,
+  PermissionsAndroid,
+  Platform,
 } from 'react-native';
+import CameraRoll from '@react-native-community/cameraroll';
 import {RNFFprobe, RNFFmpeg} from 'react-native-ffmpeg';
 import RNFS from 'react-native-fs';
 
@@ -27,6 +29,22 @@ const getFilePathByUri = async (uri) => {
     await RNFS.copyFile(uri, destPath);
   }
   return destPath;
+};
+
+const hasAndroidPermission = async () => {
+  const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
+
+  const hasPermission = await PermissionsAndroid.check(permission);
+  if (hasPermission) {
+    return true;
+  }
+
+  const status = await PermissionsAndroid.request(permission);
+  return status === 'granted';
+};
+
+const hasCamerarollPermission = async () => {
+  return !(Platform.OS === 'android' && !(await hasAndroidPermission()));
 };
 
 const Button = (props) => {
@@ -57,6 +75,13 @@ const App = () => {
     }));
   };
 
+  const setIsLoading = (isLoading) => {
+    setState((prevState) => ({
+      ...prevState,
+      isLoading,
+    }));
+  };
+
   const setVideoThumbnail = (uri) => {
     setState((prevState) => ({
       ...prevState,
@@ -71,18 +96,31 @@ const App = () => {
     }));
   };
 
+  const saveToCameraroll = async (filePath) => {
+    if (!(await hasCamerarollPermission())) {
+      return;
+    }
+
+    const saveResult = await CameraRoll.save(filePath);
+    log(`Cameraroll save result: ${saveResult}`);
+  };
+
   const convertVideo = () => async () => {
+    setIsLoading(true);
+
     const resultPath = `${RNFS.CachesDirectoryPath}/video.mp4`;
     log(`convertVideo resultPath: ${resultPath}`);
 
     const result = await RNFFmpeg.execute(
-      `-y -i ${state.videoUri} -vf scale=-2:720 -c:v libx264 -crf 23 -preset slower -c:a copy ${resultPath}`,
+      `-y -i ${state.videoUri} -vf scale=-2:720 -c:v libx264 -c:a aac -crf 23 -preset slower ${resultPath}`,
     );
     log(`convertVideo result: ${result}`);
 
     if (result === 0) {
+      await saveToCameraroll(resultPath);
       setConvertedVideo(resultPath);
     }
+    setIsLoading(false);
   };
 
   const getVideoFrame = (n) => async () => {
