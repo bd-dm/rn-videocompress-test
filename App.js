@@ -112,7 +112,7 @@ const App = () => {
     log(`convertVideo resultPath: ${resultPath}`);
 
     const result = await RNFFmpeg.execute(
-      `-y -i ${state.videoUri} -vf scale=-2:720 -c:v libx264 -c:a aac -crf 23 -preset slower ${resultPath}`,
+      `-y -i ${state.videoUri} -r 30 -vf scale=-2:720 -c:v libx264 -c:a aac -crf 15 -preset veryslow ${resultPath}`,
     );
     log(`convertVideo result: ${result}`);
 
